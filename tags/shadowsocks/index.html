@@ -26,6 +26,8 @@
     
     
     
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+    
     
     
     
@@ -290,8 +292,10 @@
                 <div class="post_entry-module mdl-card mdl-shadow--9dp mdl-cell mdl-cell--12-col fade out">
     <!-- Post Thumbnail -->
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="thumbnail.png">
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
     
 
         <!-- Post Title -->
@@ -301,7 +305,7 @@
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            背景在共产党的光辉...
+            Welcome to YUE...
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -353,7 +357,7 @@
         randomNum = Math.floor(Math.random() * 19 + 1);
 
         locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+        locatePost.children('.post_thumbnail-random').attr('data-original', 'https://api.i-meto.com/bing?new' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
 
         locatePost = locatePost.next();
@@ -656,6 +660,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
