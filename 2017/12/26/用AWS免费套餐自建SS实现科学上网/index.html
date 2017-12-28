@@ -360,7 +360,7 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(用AWS免费套餐自建SS实现科学上网/thumbnail.png)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(thumbnail.png)">
     
             <p class="article-headline-p">
                 用AWS免费套餐自建SS实现科学上网
@@ -495,8 +495,8 @@
 <p>*这里配置的端口号是你在安全组中放开的端口号</p>
 <h1 id="启动shadowsocks"><a href="#启动shadowsocks" class="headerlink" title="启动shadowsocks"></a>启动shadowsocks</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*启动*/ ssserver -c /etc/shadowsocks/ss.json -d start </span><br><span class="line">/*停止*/ ssserver -c /etc/shadowsocks/ss.json -d stop </span><br><span class="line">/*重启*/ ssserver -c /etc/shadowsocks/ss.json -d restart</span><br></pre></td></tr></table></figure>
 <h1 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
-<p>在<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>sudo ssserver -c /etc/shadowsocks/ss.json -d start<br>```</p>
+<p>在<em>exit(0)</em>前面加上下面的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssserver -c /etc/shadowsocks/ss.json -d start</span><br></pre></td></tr></table></figure>
 <h1 id="下载shadowsocks客户端"><a href="#下载shadowsocks客户端" class="headerlink" title="下载shadowsocks客户端"></a>下载shadowsocks客户端</h1><p><a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank" rel="noopener">Mac下载地址</a><br>下载完成后选择“服务器-&gt;服务器配置”，按刚才配置文件里的填写，地址为你的EC2公网地址，端口和密码就是刚配置文件里的</p>
 <p><img src="/2017/12/26/用AWS免费套餐自建SS实现科学上网/4.png" alt="pic4"></p>
 <p>*建议使用PAC模式，就是需要翻墙的网站才会使用代理，国内的不走代理，这样不会影响国内网站的浏览速度，而且省流量，免费套餐一个月好像是15G，超出了就会自动扣费的。</p>
